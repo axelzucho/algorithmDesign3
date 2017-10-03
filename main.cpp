@@ -15,9 +15,8 @@ vector<int> camioneroConPrisa(int n, vector<int> gasStations, int totalDistance)
     vector<int> result;
     while(destiny < totalDistance){
         par = *(lower_bound(gasStations.begin(), gasStations.end(), destiny)-1);
-        if(par + n <= destiny) return result;#include <iostream>
-
-                                              result.push_back(par);
+        if(par + n <= destiny) return result;
+        result.push_back(par);
         destiny = par;
         destiny += n;
     }
@@ -204,6 +203,9 @@ void textJustificationExample(){
 }
 
 int main() {
+    exampleCouples();
+    exampleCamioneroConPrisa();
+    exampleLCIS();
     textJustificationExample();
 }
 
